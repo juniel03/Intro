@@ -57,7 +57,7 @@ public class WelcomeActivity extends AppCompatActivity {
         layouts = new int[]{
                 R.layout.welcome_side1,
                 R.layout.welcome_side2,
-                R.layout.welcome_side3,
+                R.layout.welcome_resource_3_layout,
                 R.layout.welcome_side4};
 
         // adding bottom dots
@@ -73,7 +73,9 @@ public class WelcomeActivity extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchHomeScreen();
+                prefManager.setFirstTimeLaunch(false);
+                startActivity(new Intent(WelcomeActivity.this, EmptyActivity.class));
+                finish();
             }
         });
     }
@@ -88,7 +90,7 @@ public class WelcomeActivity extends AppCompatActivity {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226;"));
             dots[i].setTextSize(35);
-            dots[i].setTextColor(colorsInactive[currentPage]);
+             dots[i].setTextColor(colorsInactive[currentPage]);
             dotsLayout.addView(dots[i]);
         }
 

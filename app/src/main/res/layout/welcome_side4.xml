@@ -1,40 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_screen4">
+    android:background="@drawable/background_color">
 
-    <LinearLayout
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="280dp"
+        android:layout_height="500dp"
+        android:layout_alignParentEnd="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/done_screen" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="434dp"
+        android:layout_marginEnd="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/line1" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="472dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/line2" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="91dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="432dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/line3" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="63dp"
+        android:layout_height="489dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/line4" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="34dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:srcCompat="@drawable/line5" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="31dp"
+        android:layout_height="202dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/line6" />
+
+    <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:text="tap back button"
+        android:textColor="@color/purple"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-        <ImageView
-            android:layout_width="@dimen/img_width_height"
-            android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/ic_travel" />
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="tap home button"
+        android:textColor="@color/purple"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/slide_4_title"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/slide_title"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="tap play button"
+        android:textColor="@color/purple"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView12"
+        app:layout_constraintEnd_toEndOf="@+id/imageView12"
+        app:layout_constraintStart_toStartOf="@+id/imageView12" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:paddingLeft="@dimen/desc_padding"
-            android:paddingRight="@dimen/desc_padding"
-            android:text="@string/slide_4_desc"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/slide_desc" />
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="tap options button"
+        android:textColor="@color/purple"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="@+id/imageView10" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tap next button"
+        android:textColor="@color/purple"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tap next button"
+        android:textColor="@color/purple"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="109dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="7dp"
+        android:text="To repeat question and to record again"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="76dp"
+        android:layout_height="16dp"
+        android:text="To get home"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="109dp"
+        android:layout_height="16dp"
+        android:text="To view your record"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="95dp"
+        android:layout_height="17dp"
+        android:text="To view options"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="76dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:text="To proceed to next question"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView11"
+        app:layout_constraintStart_toStartOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="To view gallery"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Overview"
+        android:textColor="@color/purple"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
